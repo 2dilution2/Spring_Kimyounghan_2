@@ -8,7 +8,7 @@ import org.junit.jupiter.api.DisplayName;
 
 import hello.core.AppConfig;
 
-public class ApplicationContextInfoTest {
+class ApplicationContextInfoTest {
 	
 	AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
 	
