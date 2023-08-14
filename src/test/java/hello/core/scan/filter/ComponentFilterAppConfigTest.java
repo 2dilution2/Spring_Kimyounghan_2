@@ -14,12 +14,12 @@ public class ComponentFilterAppConfigTest {
 	@Test
 	void filterScan() {
 		ApplicationContext ac = new AnnotationConfigApplicationContext(ComponentFilterAppConfig.class);
-		Object beanA = ac.getBean("BeanA", BeanA.class);
+		BeanA beanA = ac.getBean("beanA", BeanA.class);
 		Assertions.assertThat(beanA).isNotNull();
 		
 		org.junit.jupiter.api.Assertions.assertThrows(
 				NoSuchBeanDefinitionException.class, 
-				() -> ac.getBean("BeanB", BeanB.class)
+				() -> ac.getBean("beanB", BeanB.class)
 		);
 	}
 	
